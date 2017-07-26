@@ -1,0 +1,19 @@
+{
+  "iconNavigation": [
+    {
+      "id": "profile",
+      "label": "My Profile",
+      "routeLink": "."
+    },
+    {
+      "id": "changePassword",
+      "label": "Change Password",
+      "routeLink": "."
+    },
+    {
+      "id": "logout",
+      "label": "Logout",
+      "routeLink": "."
+    }
+  ]
+}
