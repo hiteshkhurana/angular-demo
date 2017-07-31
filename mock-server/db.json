@@ -1,19 +1,29 @@
 {
-  "iconNavigation": [
+  "accountDetail": [
     {
-      "id": "profile",
-      "label": "My Profile",
-      "routeLink": "."
+      "startDate": "10/5/2016",
+      "endDate": "10/6/2016",
+      "paymentDue": 1000
     },
     {
-      "id": "changePassword",
-      "label": "Change Password",
-      "routeLink": "."
+      "startDate": "10/7/2016",
+      "endDate": "10/8/2016",
+      "paymentDue": 2000
     },
     {
-      "id": "logout",
-      "label": "Logout",
-      "routeLink": "."
+      "startDate": "10/8/2016",
+      "endDate": "10/9/2016",
+      "paymentDue": 2000
+    },
+    {
+      "startDate": "10/9/2016",
+      "endDate": "10/10/2016",
+      "paymentDue": 1000
+    },
+    {
+      "startDate": "10/10/2016",
+      "endDate": "10/11/2016",
+      "paymentDue": 1200
     }
   ]
 }

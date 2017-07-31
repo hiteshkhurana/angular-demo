@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { MaterializeModule } from 'ng2-materialize';
 
 import {HeaderComponent} from './header/header.component';
+import { SideNavComponent } from './side-nav/side-nav.component';
 
 @NgModule({
   imports: [
@@ -12,10 +13,12 @@ import {HeaderComponent} from './header/header.component';
     MaterializeModule
   ],
   exports:[
-    HeaderComponent
+    HeaderComponent,
+    SideNavComponent
   ],
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    SideNavComponent
   ]
 })
 export class SharedModule { }
