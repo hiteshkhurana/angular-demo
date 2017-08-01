@@ -1,4 +1,29 @@
 <app-side-nav></app-side-nav>
 <div class='section home'>
     <app-header></app-header>
+    <div class='container'>
+        <h4>Loan Status</h4>
+        <div class='row'>
+            <div class='col s12'>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Payment Due</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor='let loan of accountDetails'>
+                            <td>{{loan.name}}</td>
+                            <td>{{loan.startDate}}</td>
+                            <td>{{loan.endDate}}</td>
+                            <td>{{loan.paymentDue | currency}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
