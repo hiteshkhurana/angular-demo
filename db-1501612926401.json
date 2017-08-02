@@ -31,9 +31,5 @@
       "paymentDue": 1200
     }
   ],
-  "authentication": {
-    "id": "user2017",
-    "token": "asdasdasd12312d21d",
-    "userName": "User-2017"
-  }
+  "authentication": {}
 }

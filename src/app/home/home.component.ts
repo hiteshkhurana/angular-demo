@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { CoreService } from '../core/service/core.service';
+import { AccountDetailService } from '../service/account-detail/account-detail.service';
 
 @Component({
   selector: 'app-home',
@@ -10,10 +10,10 @@ import { CoreService } from '../core/service/core.service';
 export class HomeComponent implements OnInit {
 
   accountDetails:Array<Object>;
-  constructor(private coreService: CoreService) { }
+  constructor(private accountDetailService: AccountDetailService) { }
 
   ngOnInit():void {
-    this.coreService.getAccountDetail()
+    this.accountDetailService.getAccountDetail()
         .subscribe(
           accountDetails => {
             this.accountDetails = accountDetails;

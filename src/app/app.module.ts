@@ -12,7 +12,9 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import routes from './app.routes';
-import { CoreService } from './core/service/core.service';
+import { AccountDetailService } from './service/account-detail/account-detail.service';
+import { AuthGuard } from './auth-guard/auth-guard.service';
+import { AuthenticationService } from './service/authentication/authentication.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,7 @@ import { CoreService } from './core/service/core.service';
     MaterializeModule.forRoot(),
     SharedModule
   ],
-  providers: [CoreService],
+  providers: [AccountDetailService, AuthGuard, AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

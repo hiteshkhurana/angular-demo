@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+
+import { AuthenticationService } from '../service/authentication/authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -22,7 +25,11 @@ export class LoginComponent implements OnInit {
       'required': 'Password is required'
     }
   }
-  constructor( private formBuilder: FormBuilder ) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private service: AuthenticationService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.buildLoginForm();
@@ -36,7 +43,22 @@ export class LoginComponent implements OnInit {
       password: [
         this.login.password, Validators.required
       ]
-    })
+    });
+  }
+
+  onSubmit(){
+    let userName = this.loginForm.get('userName').value;
+    let password = this.loginForm.get('password').value;
+
+    this.service.authenticate(userName, password)
+        .subscribe(
+          data => {
+            this.router.navigate(['./home']);
+          },
+          error => {
+            console.log(error);
+          }
+        );
   }
 
 }

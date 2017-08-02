@@ -5,10 +5,10 @@ import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
-import { apiConstants } from '../constants/core.constants';
+import { apiConstants } from '../../constants/core.constants';
 
 @Injectable()
-export class CoreService {
+export class AccountDetailService {
 
   constructor(private http: Http) { }
 
