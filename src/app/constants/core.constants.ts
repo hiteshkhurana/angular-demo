@@ -1,3 +1,4 @@
 export const apiConstants = {
-    'apiUrl' : 'http://localhost:8080/ap1/v1'
+    'baseUrl' : 'http://localhost:8080/ap1/v1',
+    'userUrl' : '/user'
 };
