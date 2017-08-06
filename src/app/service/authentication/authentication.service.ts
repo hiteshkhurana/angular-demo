@@ -14,7 +14,9 @@ export class AuthenticationService {
   constructor(private http: Http, private router: Router) { }
 
   authenticate(username: string, password: string){
-    let headers = new Headers({'Content-type': 'application/json'});
+    let headers = new Headers({
+      'Content-type': 'application/json'
+    });
     let options = new RequestOptions({headers: headers});
     let body = JSON.stringify({
       'email': username,

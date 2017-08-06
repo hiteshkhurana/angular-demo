@@ -18,7 +18,7 @@ export class AccountDetailService {
     );
     let options = new RequestOptions({headers: headers});
 
-    return this.http.get(apiConstants.apiUrl + '/accountDetail', options)
+    return this.http.get(apiConstants.baseUrl + '/accountDetail', options)
         .map((rs:Response) => rs.json())
         .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
   }
