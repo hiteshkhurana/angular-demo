@@ -16,12 +16,12 @@ export class AuthenticationService {
   authenticate(username: string, password: string){
     let headers = new Headers({'Content-type': 'application/json'});
     let options = new RequestOptions({headers: headers});
-    let body = {
+    let body = JSON.stringify({
       'email': username,
       'password': password
-    };
+    });
 
-    return this.http.post(apiConstants.baseUrl + '/login', body, options)
+    return this.http.post(apiConstants.baseUrl + '/login', body)
         .map((response:Response) => {
           let user = response.json();
           
