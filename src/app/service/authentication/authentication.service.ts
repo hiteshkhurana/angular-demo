@@ -23,7 +23,7 @@ export class AuthenticationService {
       'password': password
     });
 
-    return this.http.post(apiConstants.baseUrl + '/login', body)
+    return this.http.post(apiConstants.baseUrl + apiConstants.userUrl + '/login', body)
         .map((response:Response) => {
           let user = response.json();
           
