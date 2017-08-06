@@ -17,7 +17,7 @@ export class AuthenticationService {
     let headers = new Headers({'Content-type': 'application/json'});
     let options = new RequestOptions({headers: headers});
 
-    return this.http.get(apiConstants.baseUrl + '/login', options)
+    return this.http.post(apiConstants.baseUrl + '/login', options)
         .map((response:Response) => {
           let user = response.json();
           
