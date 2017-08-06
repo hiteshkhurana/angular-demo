@@ -16,12 +16,12 @@ export class AuthenticationService {
     let headers = new Headers({'Content-type': 'application/json'});
     let options = new RequestOptions({headers: headers});
 
-    return this.http.get(apiConstants.apiUrl + '/authentication', options)
+    return this.http.get(apiConstants.apiUrl + '/login', options)
         .map((response:Response) => {
           let user = response.json();
           
           if (user && user.token){
-            sessionStorage.setItem('currentUser', user.token);
+            sessionStorage.setItem('currentUser', user.accessToken);
           }
         })
         .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
