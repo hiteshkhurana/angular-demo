@@ -5,3 +5,30 @@ body{
 .vertical-height{
     height: 100vh;
 }
+/*login section */
+.login{
+    width: 300px;
+    margin: 0 auto;
+}
+.login .card-panel.login__card{
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+.login-form-text{
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+.login .logo-container{
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+    line-height: 3;
+    font-size: 2.4rem;
+    color: #fff;
+}
